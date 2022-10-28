@@ -5,9 +5,94 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #252525;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+  padding: 0 1rem;
+}
+
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem;
+}
+
+.page-footer .footer-copyright {
+  background-color: #00000018;
+}
+
+.page-footer {
+  padding: 10px 0 10px 0;
+}
+
+nav .brand-logo {
+  text-shadow: 5px 3px 0px black;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 4px;
+}
+
+.progress {
+  background-color: #8a73b6;
+}
+
+.progress .indeterminate:after {
+  background-color: #610fbe;
+}
+
+.progress .indeterminate:before {
+  background-color: #610fbe;
+}
+
+.search-btn {
+  position: absolute;
+  top: 3px;
+  right: 0.5rem;
+  background-color: #610fbe;
+}
+
+.search-btn:hover {
+  background-color: #6d4fa7;
+}
+
+.rad-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+[type='radio']:checked + span:after,
+[type='radio'].with-gap:checked + span:after {
+  background-color: #610fbe;
+}
+
+[type='radio']:checked + span:after,
+[type='radio'].with-gap:checked + span:before,
+[type='radio'].with-gap:checked + span:after {
+  border: 2px solid #610fbe;
+}
+
+.not-found {
+  color: #ffffff;
+}
+
+nav ul a {
+  padding: 0 5px;
+}
+
+@media only screen and (max-width: 992px) {
+  .hide-on-med-and-down {
+    display: block !important;
+  }
 }
