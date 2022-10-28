@@ -1,6 +1,12 @@
-function Footer() {
+function Footer({ theme }) {
   return (
-    <footer className="page-footer deep-purple darken-3">
+    <footer
+      className={
+        theme === 'dark'
+          ? 'page-footer grey darken-4'
+          : 'page-footer teal darken-2'
+      }
+    >
       <div className="footer-copyright">
         <div className="container">
           © {new Date().getFullYear()} Movies App

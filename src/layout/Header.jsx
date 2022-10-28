@@ -4,26 +4,33 @@ class Header extends React.Component {
   state = {};
 
   changeTheme = () => {
-    this.props.onThemeToggle()
+    this.props.onThemeToggle();
   };
 
   render() {
     return (
-      <nav className="grey darken-4">
+      <nav
+        className={
+          this.props.theme === 'dark' ? 'grey darken-4' : 'teal darken-2'
+        }
+      >
         <div className="nav-wrapper">
-          <a href="#" className="brand-logo deep-purple-text text-darken-1">
+          <a
+            href="#"
+            className={
+              this.props.theme === 'dark'
+                ? 'brand-logo-dark'
+                : 'brand-logo-light'
+            }
+          >
             Movies App
           </a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
               <a>
-                <i
-                  className="material-icons"
-                  onClick={this.changeTheme}
-                >
+                <i className="material-icons" onClick={this.changeTheme}>
                   autorenew
                 </i>
-                {this.props.theme}
               </a>
             </li>
             <li>

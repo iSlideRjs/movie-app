@@ -5,25 +5,18 @@ import { Footer } from './layout/Footer';
 import { Main } from './layout/Main';
 
 function App() {
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState('dark');
 
   const changeTheme = () => {
-    setTheme(
-      theme === 'dark'
-        ? 'light'
-        : 'dark'
-    )
-  }
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
 
   return (
-    <>
-      <Header
-        theme={theme}
-        onThemeToggle={changeTheme}
-      />
+    <div className={theme === 'dark' ? 'app-dark' : 'app-light'}>
+      <Header theme={theme} onThemeToggle={changeTheme} />
       <Main />
-      <Footer />
-    </>
+      <Footer theme={theme} />
+    </div>
   );
 }
 

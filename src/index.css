@@ -5,9 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.app-dark {
   background: #252525;
 }
 
+.app-light {
+  background: #ffffff;
+}
 nav {
   padding: 0 1rem;
 }
@@ -25,8 +31,14 @@ nav {
   padding: 10px 0 10px 0;
 }
 
-nav .brand-logo {
+nav .brand-logo-dark {
   text-shadow: 5px 3px 0px black;
+  font-size: 30px;
+}
+
+nav .brand-logo-light {
+  color: #252525;
+  font-size: 30px;
 }
 
 .movies {
