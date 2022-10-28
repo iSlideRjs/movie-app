@@ -2,7 +2,10 @@ import React from 'react';
 
 class Header extends React.Component {
   state = {};
-  changeTheme = () => {};
+
+  changeTheme = () => {
+    this.props.onThemeToggle()
+  };
 
   render() {
     return (
@@ -14,9 +17,13 @@ class Header extends React.Component {
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
               <a>
-                <i className="material-icons" onClick={this.changeTheme}>
+                <i
+                  className="material-icons"
+                  onClick={this.changeTheme}
+                >
                   autorenew
                 </i>
+                {this.props.theme}
               </a>
             </li>
             <li>
