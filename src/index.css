@@ -98,25 +98,14 @@ nav .brand-logo-light {
 }
 
 [type='radio']:checked + span:after,
-[type='radio'].with-gap-dark:checked + span:after {
-  background-color: #610fbe;
+[type='radio'].with-gap:checked + span:after {
+  background-color: #4f4f50;
 }
 
 [type='radio']:checked + span:after,
-[type='radio'].with-gap-light:checked + span:after {
-  background-color: #099c90;
-}
-
-[type='radio']:checked + span:after,
-[type='radio'].with-gap-dark:checked + span:before,
-[type='radio'].with-gap-dark:checked + span:after {
-  border: 2px solid #610fbe;
-}
-
-[type='radio']:checked + span:after,
-[type='radio'].with-gap-light:checked + span:before,
-[type='radio'].with-gap-light:checked + span:after {
-  border: 2px solid #099c90;
+[type='radio'].with-gap:checked + span:before,
+[type='radio'].with-gap:checked + span:after {
+  border: 2px solid #4f4f50;
 }
 
 .not-found {

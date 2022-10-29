@@ -53,11 +53,7 @@ class Search extends React.Component {
           <p>
             <label>
               <input
-                className={
-                  this.props.theme === 'dark'
-                    ? 'with-gap-dark'
-                    : 'with-gap-light'
-                }
+                className="with-gap"
                 name="type"
                 type="radio"
                 data-type="all"
@@ -70,11 +66,7 @@ class Search extends React.Component {
           <p>
             <label>
               <input
-                className={
-                  this.props.theme === 'dark'
-                    ? 'with-gap-dark'
-                    : 'with-gap-light'
-                }
+                className="with-gap"
                 name="type"
                 type="radio"
                 data-type="movie"
@@ -87,11 +79,7 @@ class Search extends React.Component {
           <p>
             <label>
               <input
-                className={
-                  this.props.theme === 'dark'
-                    ? 'with-gap-dark'
-                    : 'with-gap-light'
-                }
+                className="with-gap"
                 name="type"
                 type="radio"
                 data-type="series"
