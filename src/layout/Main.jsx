@@ -38,10 +38,11 @@ class Main extends React.Component {
 
   render() {
     const { movies, loading } = this.state;
+    const { theme } = this.props;
 
     return (
       <main className="container content">
-        <Search searchMovies={this.searchMovies} />
+        <Search theme={theme} searchMovies={this.searchMovies} />
         {loading ? ( //прелоудер
           <Preloader />
         ) : (

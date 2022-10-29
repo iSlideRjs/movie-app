@@ -3,7 +3,7 @@ function Footer({ theme }) {
     <footer
       className={
         theme === 'dark'
-          ? 'page-footer grey darken-4'
+          ? 'page-footer purple darken-4'
           : 'page-footer teal darken-2'
       }
     >

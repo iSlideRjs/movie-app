@@ -35,7 +35,11 @@ class Search extends React.Component {
               onKeyDown={this.handleKey}
             />
             <button
-              className="btn search-btn"
+              className={
+                this.props.theme === 'dark'
+                  ? 'btn search-btn-dark'
+                  : 'btn search-btn-light'
+              }
               onClick={
                 () =>
                   this.props.searchMovies(this.state.search, this.state.type) //на клик передает стейты
@@ -49,7 +53,11 @@ class Search extends React.Component {
           <p>
             <label>
               <input
-                className="with-gap"
+                className={
+                  this.props.theme === 'dark'
+                    ? 'with-gap-dark'
+                    : 'with-gap-light'
+                }
                 name="type"
                 type="radio"
                 data-type="all"
@@ -62,7 +70,11 @@ class Search extends React.Component {
           <p>
             <label>
               <input
-                className="with-gap"
+                className={
+                  this.props.theme === 'dark'
+                    ? 'with-gap-dark'
+                    : 'with-gap-light'
+                }
                 name="type"
                 type="radio"
                 data-type="movie"
@@ -75,7 +87,11 @@ class Search extends React.Component {
           <p>
             <label>
               <input
-                className="with-gap"
+                className={
+                  this.props.theme === 'dark'
+                    ? 'with-gap-dark'
+                    : 'with-gap-light'
+                }
                 name="type"
                 type="radio"
                 data-type="series"

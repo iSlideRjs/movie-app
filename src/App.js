@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { Header } from './layout/Header';
 import { Footer } from './layout/Footer';
 import { Main } from './layout/Main';
@@ -14,7 +13,7 @@ function App() {
   return (
     <div className={theme === 'dark' ? 'app-dark' : 'app-light'}>
       <Header theme={theme} onThemeToggle={changeTheme} />
-      <Main />
+      <Main theme={theme} />
       <Footer theme={theme} />
     </div>
   );

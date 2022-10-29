@@ -1,8 +1,6 @@
 import React from 'react';
 
 class Header extends React.Component {
-  state = {};
-
   changeTheme = () => {
     this.props.onThemeToggle();
   };
@@ -16,7 +14,7 @@ class Header extends React.Component {
       >
         <div className="nav-wrapper">
           <a
-            href="#"
+            href="/"
             className={
               this.props.theme === 'dark'
                 ? 'brand-logo-dark'
@@ -27,11 +25,14 @@ class Header extends React.Component {
           </a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
-              <a>
-                <i className="material-icons" onClick={this.changeTheme}>
-                  autorenew
-                </i>
-              </a>
+              <div className="switch">
+                <label>
+                  Dark
+                  <input type="checkbox" onClick={this.changeTheme} />
+                  <span className="lever"></span>
+                  Light
+                </label>
+              </div>
             </li>
             <li>
               <a href="https://github.com/iKHVRV" target="_blank">
