@@ -46,7 +46,7 @@ class Main extends React.Component {
         {loading ? ( //прелоудер
           <Preloader />
         ) : (
-          <Movies movies={movies} />
+          <Movies movies={movies} theme={theme} />
         )}
       </main>
     );

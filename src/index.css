@@ -46,7 +46,9 @@ nav .brand-logo-light {
 .movies {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  align-content: space-around;
+  justify-content: space-around;
+  min-height: calc(67vh - 70px - 64px);
 }
 
 .movie {
@@ -90,7 +92,7 @@ nav .brand-logo-light {
 
 .rad-btn {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
 }
 
 .row {
@@ -108,8 +110,14 @@ nav .brand-logo-light {
   border: 2px solid #4f4f50;
 }
 
-.not-found {
-  color: #9e9e9e;
+.not-found-dark {
+  color: #5d3baf;
+  text-shadow: black 3px 5px 6px;
+}
+
+.not-found-light {
+  color: #2d9792;
+  text-shadow: #277465 1px 2px 3px;
 }
 
 nav ul a {
@@ -118,6 +126,22 @@ nav ul a {
 
 .switch {
   margin-right: 10px;
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+  max-height: 400px;
+}
+
+.input-field input[type='search'] {
+  padding-left: 10px;
+}
+
+[type='radio']:not(:checked) + span,
+[type='radio']:checked + span {
+  padding-left: 22px;
+  margin-left: 12px;
 }
 
 @media only screen and (max-width: 992px) {
