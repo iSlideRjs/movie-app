@@ -4,6 +4,7 @@ import { Footer } from './layout/Footer';
 import { Main } from './layout/Main';
 
 function App() {
+  // TODO connect redux and store this value there
   const [theme, setTheme] = useState('dark');
 
   const changeTheme = () => {

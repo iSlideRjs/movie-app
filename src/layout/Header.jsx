@@ -1,4 +1,5 @@
 import React from 'react';
+import { Logo } from '../components/Logo';
 
 class Header extends React.Component {
   changeTheme = () => {
@@ -14,14 +15,14 @@ class Header extends React.Component {
       >
         <div className="nav-wrapper">
           <a
-            href="/"
+            href="/movie-app/"
             className={
               this.props.theme === 'dark'
                 ? 'brand-logo-dark'
                 : 'brand-logo-light'
             }
           >
-            Movies App
+            <Logo />
           </a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>

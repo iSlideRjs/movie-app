@@ -111,13 +111,11 @@ nav .brand-logo-light {
 }
 
 .not-found-dark {
-  color: #5d3baf;
-  text-shadow: black 3px 5px 6px;
+  color: #484848;
 }
 
 .not-found-light {
-  color: #2d9792;
-  text-shadow: #277465 1px 2px 3px;
+  color: #b8b8b8;
 }
 
 nav ul a {

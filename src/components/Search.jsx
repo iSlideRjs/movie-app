@@ -12,6 +12,7 @@ class Search extends React.Component {
     }
   };
 
+  // TODO debounce and throttle
   handleFilter = (event) => {
     this.setState(
       () => ({ type: event.target.dataset.type }),

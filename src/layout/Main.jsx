@@ -42,7 +42,10 @@ class Main extends React.Component {
 
     return (
       <main className="container content">
-        <Search theme={theme} searchMovies={this.searchMovies} />
+        <Search
+          theme={theme}
+          searchMovies={this.searchMovies}
+        />
         {loading ? ( //прелоудер
           <Preloader />
         ) : (
