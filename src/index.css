@@ -70,15 +70,21 @@ nav .brand-logo-light {
 
 .search-btn-dark {
   position: absolute;
-  top: 3px;
-  right: 0.5rem;
+  top: 0px;
+  right: -12px;
+  border-radius: 30px;
   background-color: #610fbe;
+}
+
+.btn {
+  height: 45px;
 }
 
 .search-btn-light {
   position: absolute;
-  top: 3px;
-  right: 0.5rem;
+  top: 0px;
+  right: -12px;
+  border-radius: 30px;
   background-color: #099c90;
 }
 
@@ -130,8 +136,11 @@ nav ul a {
 
 .card .card-image {
   position: relative;
-  overflow: hidden;
-  max-height: 400px;
+  height: 400px;
+  background: #d5d1d1;
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
 }
 
 .input-field input[type='search'] {
@@ -142,6 +151,13 @@ nav ul a {
 [type='radio']:checked + span {
   padding-left: 22px;
   margin-left: 12px;
+}
+
+input[type='search']:not(.browser-default),
+textarea.materialize-textarea {
+  background-color: #938f8f30;
+  border-bottom: 0px;
+  border-radius: 30px;
 }
 
 @media only screen and (max-width: 992px) {
