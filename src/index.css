@@ -47,7 +47,7 @@ nav .brand-logo-light {
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
-  justify-content: space-around;
+  justify-content: center;
   min-height: calc(67vh - 70px - 64px);
 }
 
@@ -117,13 +117,11 @@ nav .brand-logo-light {
 }
 
 .not-found-dark {
-  color: #5d3baf;
-  text-shadow: black 3px 5px 6px;
+  color: #484848;
 }
 
 .not-found-light {
-  color: #2d9792;
-  text-shadow: #277465 1px 2px 3px;
+  color: #b8b8b8;
 }
 
 nav ul a {
@@ -160,8 +158,22 @@ textarea.materialize-textarea {
   border-radius: 30px;
 }
 
+.btn:focus {
+  background-color: #610fbe;
+}
+
+@media only screen and (max-width: 1200px) {
+  .btn {
+    height: 43.5px;
+  }
+}
+
 @media only screen and (max-width: 992px) {
   .hide-on-med-and-down {
     display: block !important;
+  }
+
+  .btn {
+    height: 42px;
   }
 }

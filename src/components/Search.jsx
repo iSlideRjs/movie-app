@@ -4,7 +4,6 @@ class Search extends React.Component {
   state = {
     search: '',
     type: 'all',
-    input: 0,
   };
 
   handleKey = (event) => {
@@ -13,6 +12,7 @@ class Search extends React.Component {
     }
   };
 
+  // TODO debounce and throttle
   handleFilter = (event) => {
     this.setState(
       () => ({ type: event.target.dataset.type }),
@@ -36,40 +36,25 @@ class Search extends React.Component {
               onChange={(e) =>
                 this.setState({
                   search: e.target.value,
-                  input: e.target.value.length,
                 })
               }
-              onKeyDown={input === 0 ? '' : this.handleKey}
+              onKeyDown={
+                this.state.search.length === 0 ? undefined : this.handleKey
+              }
             />
-            {input === 0 ? (
-              <button
-                disabled
-                className={
-                  this.props.theme === 'dark'
-                    ? 'btn search-btn-dark'
-                    : 'btn search-btn-light'
-                }
-                onClick={() =>
-                  this.props.searchMovies(this.state.search, this.state.type)
-                }
-              >
-                Search
-              </button>
-            ) : (
-              <button
-                className={
-                  this.props.theme === 'dark'
-                    ? 'btn search-btn-dark'
-                    : 'btn search-btn-light'
-                }
-                onClick={
-                  () =>
-                    this.props.searchMovies(this.state.search, this.state.type) //на клик передает стейты
-                }
-              >
-                Search
-              </button>
-            )}
+            <button
+              disabled={this.state.search.length === 0}
+              className={
+                this.props.theme === 'dark'
+                  ? 'btn search-btn-dark'
+                  : 'btn search-btn-light'
+              }
+              onClick={() =>
+                this.props.searchMovies(this.state.search, this.state.type)
+              }
+            >
+              Search
+            </button>
           </div>
         </div>
         <div className="rad-btn">
