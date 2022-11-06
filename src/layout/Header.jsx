@@ -8,22 +8,9 @@ class Header extends React.Component {
 
   render() {
     return (
-      <nav
-        className={
-          this.props.theme === 'dark' ? 'grey darken-4' : 'teal darken-2'
-        }
-      >
+      <nav>
         <div className="nav-wrapper">
-          <a
-            href="/movie-app/"
-            className={
-              this.props.theme === 'dark'
-                ? 'brand-logo-dark'
-                : 'brand-logo-light'
-            }
-          >
-            <Logo />
-          </a>
+          <Logo />
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
               <div className="switch">
