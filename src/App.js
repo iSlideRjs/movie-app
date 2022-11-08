@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Header } from './layout/Header';
 import { Footer } from './layout/Footer';
 import { Main } from './layout/Main';
+import classNames from 'classnames';
 
 function App() {
   // TODO connect redux and store this value there
@@ -12,7 +13,12 @@ function App() {
   };
 
   return (
-    <div className={theme === 'dark' ? 'app-dark' : 'app-light'}>
+    <div
+      className={classNames('app', {
+        'app-dark': theme === 'dark',
+        'app-light': theme === 'light',
+      })}
+    >
       <Header theme={theme} onThemeToggle={changeTheme} />
       <Main theme={theme} />
       <Footer theme={theme} />

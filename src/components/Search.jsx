@@ -32,9 +32,7 @@ const Search = (props) => {
           />
           <button
             disabled={search.length === 0}
-            className={
-              theme === 'dark' ? 'btn search-btn-dark' : 'btn search-btn-light'
-            }
+            className="btn search-btn"
             onClick={() => searchMovies(search, type)}
           >
             Search

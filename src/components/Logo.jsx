@@ -1,9 +1,6 @@
 function Logo({ theme }) {
   return (
-    <a
-      href="/movie-app/"
-      className={theme === 'dark' ? 'logo-dark' : 'logo-light'}
-    >
+    <a href="/movie-app/" className="logo">
       Movies
     </a>
   );

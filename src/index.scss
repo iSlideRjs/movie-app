@@ -1,5 +1,6 @@
 * {
   /*приорететность*/
+  /*sass*/
   box-sizing: border-box !important;
 }
 
@@ -12,9 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.logo-dark {
-  color: #9434ff;
-  text-shadow: 0px 0px 40px #7d1de9, 0px 0px 18px #7d1de9;
+.logo {
   font-family: 'Satisfy', cursive;
   font-size: 40px;
   display: inline-block;
@@ -22,22 +21,68 @@ body {
   padding-top: 5px;
 }
 
-.logo-light {
-  color: #10b58e;
-  text-shadow: 0px 0px 40px #1de9bd, 0px 0px 18px #1de9cb;
-  font-family: 'Satisfy', cursive;
-  font-size: 40px;
-  display: inline-block;
-  padding-left: 35px;
-  padding-top: 5px;
+.btn {
+  height: 45px;
 }
 
-.app-dark {
-  background: #252525;
+.search-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-radius: 20px;
+
+  &:disabled {
+    color: white !important;
+    box-shadow: none !important;
+  }
 }
 
-.app-light {
-  background: #f1f1f1;
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &-dark {
+    background: #252525;
+
+    .logo {
+      color: #9434ff;
+      text-shadow: 0px 0px 40px #7d1de9, 0px 0px 18px #7d1de9;
+    }
+
+    .search-btn {
+      background-color: #610fbe;
+
+      &:disabled {
+        background-color: #4b3762 !important;
+      }
+
+      &:hover {
+        background-color: #6d4fa7;
+      }
+    }
+  }
+
+  &-light {
+    background: #f1f1f1;
+
+    .logo {
+      color: #10b58e;
+      text-shadow: 0px 0px 40px #1de9bd, 0px 0px 18px #1de9cb;
+    }
+
+    .search-btn {
+      background-color: #099c90;
+
+      &:disabled {
+        background-color: #80bfba !important;
+      }
+
+      &:hover {
+        background-color: #48b19f;
+      }
+    }
+  }
 }
 
 nav {
@@ -49,6 +94,7 @@ nav {
 .content {
   min-height: calc(100vh - 70px - 64px);
   padding: 1.5rem;
+  flex: 1;
 }
 
 .page-footer .footer-copyright {
@@ -82,46 +128,6 @@ nav {
 
 .progress .indeterminate:before {
   background-color: #777777;
-}
-
-.search-btn-dark {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  border-radius: 20px;
-  background-color: #610fbe;
-}
-
-.btn {
-  height: 45px;
-}
-
-.search-btn-light:disabled {
-  background-color: #80bfba !important;
-  color: white !important;
-  box-shadow: none !important;
-}
-
-.search-btn-dark:disabled {
-  background-color: #4b3762 !important;
-  color: white !important;
-  box-shadow: none !important;
-}
-
-.search-btn-light {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  border-radius: 20px;
-  background-color: #099c90;
-}
-
-.search-btn-dark:hover {
-  background-color: #6d4fa7;
-}
-
-.search-btn-light:hover {
-  background-color: #48b19f;
 }
 
 .rad-btn {
