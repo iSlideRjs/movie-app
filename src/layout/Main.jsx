@@ -5,7 +5,7 @@ import { Preloader } from '../components/Preloader';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-function Main({ theme }) {
+function Main() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -42,11 +42,11 @@ function Main({ theme }) {
 
   return (
     <main className="container content">
-      <Search theme={theme} searchMovies={searchMovies} />
+      <Search searchMovies={searchMovies} />
       {loading ? ( //прелоудер
         <Preloader />
       ) : (
-        <Movies movies={movies} theme={theme} />
+        <Movies movies={movies} />
       )}
     </main>
   );

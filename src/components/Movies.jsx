@@ -10,13 +10,7 @@ function Movies(props) {
           <Movie key={movie.imdbID} {...movie} /> //можно перечеслить вручную значения или предоператор отправляет все ключи
         ))
       ) : (
-        <h4
-          className={
-            props.theme === 'dark' ? 'not-found-dark' : 'not-found-light'
-          }
-        >
-          Movies not found
-        </h4>
+        <h4 className="not-found">Movies not found</h4>
       )}
     </div>
   );

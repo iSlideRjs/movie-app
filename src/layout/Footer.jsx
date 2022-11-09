@@ -1,11 +1,12 @@
+import classNames from 'classnames';
+
 function Footer({ theme }) {
   return (
     <footer
-      className={
-        theme === 'dark'
-          ? 'page-footer purple darken-4'
-          : 'page-footer teal darken-2'
-      }
+      className={classNames('page-footer', {
+        'purple darken-4': theme === 'dark',
+        'teal darken-2': theme === 'light',
+      })}
     >
       <div className="container footer">
         © {new Date().getFullYear()} Movies

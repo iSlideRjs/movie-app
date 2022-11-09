@@ -50,6 +50,10 @@ body {
       text-shadow: 0px 0px 40px #7d1de9, 0px 0px 18px #7d1de9;
     }
 
+    .not-found {
+      color: #484848;
+    }
+
     .search-btn {
       background-color: #610fbe;
 
@@ -69,6 +73,10 @@ body {
     .logo {
       color: #10b58e;
       text-shadow: 0px 0px 40px #1de9bd, 0px 0px 18px #1de9cb;
+    }
+
+    .not-found {
+      color: #b8b8b8;
     }
 
     .search-btn {
@@ -148,14 +156,6 @@ nav {
 [type='radio'].with-gap:checked + span:before,
 [type='radio'].with-gap:checked + span:after {
   border: 2px solid #4f4f50;
-}
-
-.not-found-dark {
-  color: #484848;
-}
-
-.not-found-light {
-  color: #b8b8b8;
 }
 
 nav ul a {

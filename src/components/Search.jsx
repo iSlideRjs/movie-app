@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-const Search = (props) => {
-  const { searchMovies } = props;
-  const { theme } = props;
+const Search = ({ searchMovies }) => {
   const [search, setSearch] = useState('');
   const [type, setType] = useState('all');
 

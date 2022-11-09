@@ -1,4 +1,4 @@
-function Logo({ theme }) {
+function Logo() {
   return (
     <a href="/movie-app/" className="logo">
       Movies

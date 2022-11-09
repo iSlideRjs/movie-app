@@ -9,7 +9,7 @@ const Header = (props) => {
   return (
     <nav>
       <div className="nav-wrapper">
-        <Logo theme={props.theme} />
+        <Logo />
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
             <div className="switch">
