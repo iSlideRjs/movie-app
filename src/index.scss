@@ -29,7 +29,7 @@ body {
   position: absolute;
   top: 0px;
   right: 0px;
-  border-radius: 20px;
+  border-radius: 30px;
 
   &:disabled {
     color: white !important;
@@ -44,6 +44,20 @@ body {
 
   &-dark {
     background: #252525;
+
+    .search-input {
+      color: white !important;
+
+      &:focus {
+        background-color: #383838 !important;
+        box-shadow: #00000040 0px 0px 3px 1px !important;
+      }
+
+      &:hover {
+        background-color: #383838 !important;
+        box-shadow: #00000040 0px 0px 3px 1px !important;
+      }
+    }
 
     .logo {
       color: #9434ff;
@@ -64,11 +78,29 @@ body {
       &:hover {
         background-color: #6d4fa7;
       }
+
+      &:focus {
+        background-color: #610fbe;
+      }
     }
   }
 
   &-light {
     background: #f1f1f1;
+
+    .search-input {
+      color: black !important;
+
+      &:focus {
+        background-color: #fff !important;
+        box-shadow: #00000040 0px 1px 5px 2px !important;
+      }
+
+      &:hover {
+        background-color: #fff !important;
+        box-shadow: #00000040 0px 1px 5px 2px !important;
+      }
+    }
 
     .logo {
       color: #10b58e;
@@ -89,8 +121,20 @@ body {
       &:hover {
         background-color: #48b19f;
       }
+
+      &:focus {
+        background-color: #099c90;
+      }
     }
   }
+}
+
+.search-input {
+  width: calc(100% - 2px) !important;
+  border-bottom: 0px !important;
+  border-radius: 30px !important;
+  background-color: #ffffff00 !important;
+  box-shadow: #5e5e5e87 0px 0px 3px 0px !important;
 }
 
 nav {
@@ -103,10 +147,6 @@ nav {
   min-height: calc(100vh - 70px - 64px);
   padding: 1.5rem;
   flex: 1;
-}
-
-.page-footer .footer-copyright {
-  background-color: #00000018;
 }
 
 .page-footer {
@@ -128,14 +168,14 @@ nav {
 
 .progress {
   background-color: #dfdfdf;
-}
 
-.progress .indeterminate:after {
-  background-color: #4e4e4e;
-}
+  .indeterminate:after {
+    background-color: #4e4e4e;
+  }
 
-.progress .indeterminate:before {
-  background-color: #777777;
+  .indeterminate:before {
+    background-color: #777777;
+  }
 }
 
 .rad-btn {
@@ -166,7 +206,7 @@ nav ul a {
   margin-right: 10px;
 }
 
-.card .card-image {
+.card-image {
   position: relative;
   height: 400px;
   background: #d5d1d1;
@@ -183,22 +223,6 @@ nav ul a {
 [type='radio']:checked + span {
   padding-left: 22px;
   margin-left: 12px;
-}
-
-input[type='search']:not(.browser-default),
-textarea.materialize-textarea {
-  background-color: #938f8f30;
-  border-bottom: 0px;
-  border-radius: 30px;
-  box-shadow: #00000040 0px 0px 40px 14px, #00000040 0px 0px 5px 1px;
-}
-
-.btn:focus {
-  background-color: #610fbe;
-}
-
-.search-input {
-  width: calc(100% - 1px) !important;
 }
 
 .footer {
@@ -218,7 +242,6 @@ textarea.materialize-textarea {
   }
 
   .btn {
-    border-radius: 15px;
     height: 42px;
   }
 }
