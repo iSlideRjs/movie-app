@@ -154,10 +154,6 @@ nav {
   flex: 1;
 }
 
-.page-footer {
-  padding: 10px 0 10px 0;
-}
-
 .movies {
   display: flex;
   flex-wrap: wrap;
@@ -228,11 +224,6 @@ nav ul a {
 [type='radio']:checked + span {
   padding-left: 22px;
   margin-left: 12px;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
 }
 
 @media only screen and (max-width: 1200px) {

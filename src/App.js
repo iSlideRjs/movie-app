@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Header } from './layout/Header';
-import { Footer } from './layout/Footer';
 import { Main } from './layout/Main';
 import classNames from 'classnames';
 
@@ -21,7 +20,6 @@ function App() {
     >
       <Header theme={theme} onThemeToggle={changeTheme} />
       <Main />
-      <Footer theme={theme} />
     </div>
   );
 }
