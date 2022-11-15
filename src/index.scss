@@ -140,6 +140,7 @@ body {
   background-color: #ffffff00 !important;
   //box-shadow: #5e5e5e87 0px 0px 3px 2px !important;
   border: 1px solid #5e5e5e87 !important;
+  appearance: none;
 }
 
 nav {
@@ -199,10 +200,6 @@ nav {
   border: 2px solid #4f4f50;
 }
 
-nav ul a {
-  padding: 0 5px;
-}
-
 .switch {
   margin-right: 10px;
 }
@@ -226,6 +223,14 @@ nav ul a {
   margin-left: 12px;
 }
 
+.hideable {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.hidden {
+  opacity: 0;
+}
 @media only screen and (max-width: 1200px) {
   .btn {
     height: 43.5px;

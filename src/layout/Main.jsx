@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Movies } from '../components/Movies';
 import { Search } from '../components/Search';
 import { Preloader } from '../components/Preloader';
+import classNames from 'classnames';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -11,43 +12,70 @@ function Main() {
 
   const searchMovies = (str, type = 'all') => {
     setLoading(true);
-    fetch(
-      `https://www.omdbapi.com/?apikey=${API_KEY}&s=${str}${
-        type !== 'all' ? `&type=${type}` : ''
-      }`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setMovies(data.Search);
+    //прочитать про Promise
+    new Promise((resolve, reject) => {
+      let isTimeoutFinished = false;
+      let result = null;
+      setTimeout(() => {
+        isTimeoutFinished = true;
+        if (result) {
+          resolve(result);
+        }
+      }, 500);
+      fetch(
+        `https://www.omdbapi.com/?apikey=${API_KEY}&s=${str}${
+          type !== 'all' ? `&type=${type}` : ''
+        }`
+      )
+        .then((response) => response.json())
+
+        .then((data) => {
+          if (data.Response === 'False') {
+            reject();
+            return;
+          }
+          if (isTimeoutFinished) {
+            resolve(data.Search);
+          } else {
+            result = data.Search;
+          }
+        })
+        .catch(() => {
+          reject();
+        });
+    })
+      .then((newMovies) => {
+        setMovies(newMovies);
         setLoading(false);
       })
-      .catch((err) => {
-        console.error(err);
+      .catch(() => {
+        setMovies([]);
         setLoading(false);
       });
   };
 
   useEffect(() => {
-    fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=avengers`)
-      .then((response) => response.json())
-      .then((data) => {
-        setMovies(data.Search);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setLoading(false);
-      });
+    searchMovies('avengers');
   }, []);
 
   return (
     <main className="container content">
       <Search searchMovies={searchMovies} />
-      {loading ? ( //прелоудер
+      <div
+        className={classNames('hideable', {
+          hidden: loading === false,
+        })}
+      >
         <Preloader />
-      ) : (
+      </div>
+
+      <div
+        className={classNames('hideable', {
+          hidden: loading,
+        })}
+      >
         <Movies movies={movies} />
-      )}
+      </div>
     </main>
   );
 }
