@@ -1,7 +1,16 @@
+$colorRadio: #4f4f50;
+$colorInputDark: #383838;
+$colorInputLight: #fff;
+
 * {
   /*приорететность*/
   /*sass*/
   box-sizing: border-box !important;
+}
+
+@mixin logoStyle($color, $textS...) {
+  color: $color;
+  text-shadow: $textS;
 }
 
 body {
@@ -49,21 +58,20 @@ body {
       color: white !important;
 
       &:focus {
-        background-color: #383838 !important;
+        background-color: $colorInputDark !important;
         box-shadow: #00000040 0px 0px 3px 1px !important;
         border: none !important;
       }
 
       &:hover {
-        background-color: #383838 !important;
+        background-color: $colorInputDark !important;
         box-shadow: #00000040 0px 0px 3px 1px !important;
         border: none !important;
       }
     }
 
     .logo {
-      color: #9434ff;
-      text-shadow: 0px 0px 40px #7d1de9, 0px 0px 18px #7d1de9;
+      @include logoStyle(#9434ff, 0px 0px 40px #7d1de9, 0px 0px 18px #7d1de9);
     }
 
     .not-found {
@@ -94,21 +102,20 @@ body {
       color: black !important;
 
       &:focus {
-        background-color: #fff !important;
+        background-color: $colorInputLight !important;
         box-shadow: #00000040 0px 1px 5px 2px !important;
         border: none !important;
       }
 
       &:hover {
-        background-color: #fff !important;
+        background-color: $colorInputLight !important;
         box-shadow: #00000040 0px 1px 5px 2px !important;
         border: none !important;
       }
     }
 
     .logo {
-      color: #10b58e;
-      text-shadow: 0px 0px 40px #1de9bd, 0px 0px 18px #1de9cb;
+      @include logoStyle(#10b58e, 0px 0px 40px #1de9bd, 0px 0px 18px #1de9cb);
     }
 
     .not-found {
@@ -165,7 +172,7 @@ nav {
 
 .movie {
   width: 300px;
-  margin: 4px;
+  margin: 7px 4px 7px 4px;
 }
 
 .progress {
@@ -191,13 +198,13 @@ nav {
 
 [type='radio']:checked + span:after,
 [type='radio'].with-gap:checked + span:after {
-  background-color: #4f4f50;
+  background-color: $colorRadio;
 }
 
 [type='radio']:checked + span:after,
 [type='radio'].with-gap:checked + span:before,
 [type='radio'].with-gap:checked + span:after {
-  border: 2px solid #4f4f50;
+  border: 2px solid $colorRadio;
 }
 
 .switch {

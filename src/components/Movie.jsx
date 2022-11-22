@@ -9,7 +9,7 @@ function Movie(props) {
   return (
     <div id={id} className="card movie">
       <div className="card-image waves-effect waves-block waves-light">
-        {poster === 'N/A' ? ( //если отсутствует постер выбор делаем
+        {poster === 'N/A' ? (
           <img
             className="activator"
             src={`https://via.placeholder.com/300x400?text=${title}`} //показываем название тайтл
