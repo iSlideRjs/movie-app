@@ -56,6 +56,7 @@ body {
 
     .search-input {
       color: white !important;
+      background-color: $colorInputDark !important;
 
       &:focus {
         background-color: $colorInputDark !important;
@@ -100,6 +101,7 @@ body {
 
     .search-input {
       color: black !important;
+      background-color: $colorInputLight !important;
 
       &:focus {
         background-color: $colorInputLight !important;
@@ -144,9 +146,9 @@ body {
   width: calc(100% - 2px) !important;
   border-bottom: 0px !important;
   border-radius: 30px !important;
-  background-color: #ffffff00 !important;
+  //background-color: #252525 !important;
   //box-shadow: #5e5e5e87 0px 0px 3px 2px !important;
-  border: 1px solid #5e5e5e87 !important;
+  //border: 1px solid #5e5e5e87 !important;
   appearance: none;
 }
 
@@ -220,8 +222,11 @@ nav {
   flex-wrap: wrap;
 }
 
-.input-field input[type='search'] {
-  padding-left: 20px;
+.input-field {
+  z-index: 1;
+  input[type='search'] {
+    padding-left: 20px;
+  }
 }
 
 [type='radio']:not(:checked) + span,
@@ -238,6 +243,52 @@ nav {
 .hidden {
   opacity: 0;
 }
+
+.animated-input {
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    border-radius: 30px;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(
+      45deg,
+      rgba(185, 0, 251, 1) 10%,
+      rgba(239, 0, 255, 1) 20%,
+      rgba(149, 0, 255, 1) 30%,
+      rgba(255, 0, 228, 1) 40%,
+      rgba(132, 0, 255, 1) 50%,
+      rgba(251, 0, 207, 1) 60%,
+      rgba(171, 0, 255, 1) 70%,
+      rgba(235, 0, 255, 1) 80%,
+      rgba(132, 0, 255, 1) 90%,
+      rgba(255, 0, 194, 1) 100%
+    );
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: 0;
+    animation: steam 20s linear infinite;
+  }
+  &::after {
+    filter: blur(10px);
+  }
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .btn {
     height: 43.5px;

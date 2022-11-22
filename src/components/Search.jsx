@@ -19,22 +19,24 @@ const Search = ({ searchMovies }) => {
   return (
     <>
       <div className="row">
-        <div className="input-field">
-          <input
-            placeholder="Search"
-            type="search"
-            className="validate search-input"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            onKeyDown={search.length === 0 ? undefined : handleKey}
-          />
-          <button
-            disabled={search.length === 0}
-            className="btn search-btn"
-            onClick={() => searchMovies(search, type)}
-          >
-            Search
-          </button>
+        <div className="animated-input">
+          <div className="input-field">
+            <input
+              placeholder="Search"
+              type="search"
+              className="validate search-input"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={search.length === 0 ? undefined : handleKey}
+            />
+            <button
+              disabled={search.length === 0}
+              className="btn search-btn"
+              onClick={() => searchMovies(search, type)}
+            >
+              Search
+            </button>
+          </div>
         </div>
       </div>
       <div className="rad-btn">
