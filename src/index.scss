@@ -281,8 +281,12 @@ nav {
 
 .hideable {
   display: flex;
-  justify-content: center;
+  min-height: calc(67vh - 70px - 64px);
   transition: all 200ms;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
 }
 
 .hidden {
@@ -298,7 +302,6 @@ nav {
     position: absolute;
     left: -2px;
     top: -2px;
-    background-size: 400%;
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     z-index: 0;
