@@ -295,6 +295,7 @@ nav {
 
 .animated-input {
   position: relative;
+
   &::before,
   &::after {
     content: '';
@@ -308,7 +309,7 @@ nav {
     animation: steam 20s linear infinite;
   }
   &::after {
-    filter: blur(10px);
+    filter: blur(1px);
   }
 }
 
