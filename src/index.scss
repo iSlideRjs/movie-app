@@ -3,8 +3,6 @@ $colorInputDark: #383838;
 $colorInputLight: #fff;
 
 * {
-  /*приорететность*/
-  /*sass*/
   box-sizing: border-box !important;
 }
 
@@ -57,18 +55,6 @@ body {
     .search-input {
       color: white !important;
       background-color: $colorInputDark !important;
-
-      // &:focus {
-      //   background-color: $colorInputDark !important;
-      //   box-shadow: #00000040 0px 0px 3px 1px !important;
-      //   border: none !important;
-      // }
-
-      // &:hover {
-      //   background-color: $colorInputDark !important;
-      //   box-shadow: #00000040 0px 0px 3px 1px !important;
-      //   border: none !important;
-      // }
     }
 
     .animated-input {
@@ -130,18 +116,6 @@ body {
     .search-input {
       color: black !important;
       background-color: $colorInputLight !important;
-
-      // &:focus {
-      //   background-color: $colorInputLight !important;
-      //   box-shadow: #00000040 0px 1px 5px 2px !important;
-      //   border: none !important;
-      // }
-
-      // &:hover {
-      //   background-color: $colorInputLight !important;
-      //   box-shadow: #00000040 0px 1px 5px 2px !important;
-      //   border: none !important;
-      // }
     }
 
     .animated-input {
@@ -202,9 +176,6 @@ body {
   width: calc(100% - 2px) !important;
   border-bottom: 0px !important;
   border-radius: 30px !important;
-  //background-color: #252525 !important;
-  //box-shadow: #5e5e5e87 0px 0px 3px 2px !important;
-  //border: 1px solid #5e5e5e87 !important;
   appearance: none;
 }
 

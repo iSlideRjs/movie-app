@@ -6,9 +6,7 @@ function Movies(props) {
   return (
     <div className="movies">
       {movies.length ? (
-        movies.map((movie) => (
-          <Movie key={movie.imdbID} {...movie} /> //можно перечеслить вручную значения или предоператор отправляет все ключи
-        ))
+        movies.map((movie) => <Movie key={movie.imdbID} {...movie} />)
       ) : (
         <h4 className="not-found">Movies not found</h4>
       )}

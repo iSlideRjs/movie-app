@@ -12,7 +12,7 @@ function Main() {
 
   const searchMovies = (str, type = 'all') => {
     setLoading(true);
-    //прочитать про Promise
+
     new Promise((resolve, reject) => {
       let isTimeoutFinished = false;
       let result = null;

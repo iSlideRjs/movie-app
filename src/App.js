@@ -4,7 +4,6 @@ import { Main } from './layout/Main';
 import classNames from 'classnames';
 
 function App() {
-  // TODO connect redux and store this value there
   const [theme, setTheme] = useState('dark');
 
   const changeTheme = () => {

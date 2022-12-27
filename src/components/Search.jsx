@@ -10,7 +10,6 @@ const Search = ({ searchMovies }) => {
     }
   };
 
-  // TODO debounce and throttle
   const handleFilter = (event) => {
     setType(event.target.dataset.type);
     searchMovies(search, event.target.dataset.type);
